@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maleny & Jaime - Nosso Amor Eterno</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Poppins',sans-serif;background:#fdfcf8;color:#444}
+  .hero{height:100vh;background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;text-align:center;padding:20px}
+  .hero h1{font-family:'Great Vibes',cursive;font-size:75px;font-weight:400;margin-bottom:10px}
+  .hero p{letter-spacing:4px;text-transform:uppercase;font-size:14px}
+  .contador{margin-top:25px;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);padding:15px 30px;border-radius:50px;border:1px solid rgba(255,255,255,0.3)}
+  .contador b{font-size:26px}
+  .container{max-width:650px;margin:0 auto;padding:40px 20px}
+  .card{background:white;border-radius:20px;padding:35px;box-shadow:0 15px 50px rgba(0,0,0,0.07);margin-top:-60px;position:relative}
+  .data{color:#c8a882;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:10px}
+  h2{font-family:'Great Vibes',cursive;font-size:48px;color:#2c2c2c;font-weight:400;margin-bottom:20px}
+  .carta{line-height:1.9;font-size:16px;color:#5a5a5a;text-align:left}
+  .carta p{margin-bottom:15px}
+  .assinatura{font-family:'Great Vibes',cursive;font-size:36px;color:#c8a882;margin-top:25px;text-align:right}
+  .timeline{display:flex;justify-content:space-between;margin:35px 0;text-align:center}
+  .timeline div{flex:1}
+  .timeline b{display:block;font-size:28px;color:#2c2c2c}
+  .timeline span{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#999}
+  .btn{width:100%;background:#2c2c2c;color:white;border:none;padding:18px;border-radius:50px;font-size:15px;letter-spacing:1px;margin-top:30px;cursor:pointer;transition:0.3s}
+  .btn:hover{background:#c8a882}
+  .footer{text-align:center;padding:40px;color:#bbb;font-size:12px;letter-spacing:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <p>Nosso Eterno Sim</p>
+  <h1>Maleny & Jaime</h1>
+  <p>31 • 05 • 2025</p>
+  <div class="contador">
+    Juntos há <b id="dias">0</b> dias de casados ❤️
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="data">Feliz Aniversário de Casamento</div>
+    <h2>Meu amor,</h2>
+    <div class="carta">
+      <p>Hoje o dia é nosso, Jaime. Desde o dia <b>31 de maio de 2025</b>, minha vida ganhou um novo significado. O dia em que eu disse SIM para a vida toda ao seu lado.</p>
+      
+      <p>Cada dia ao seu lado me prova que o amor verdadeiro existe. Você é minha paz, minha alegria, meu lar. Obrigada por me amar com tanta paciência, por me fazer rir quando eu quero chorar e por segurar minha mão em todos os momentos.</p>
+
+      <p>Que Deus continue abençoando nossa união. Que venham muitos e muitos anos, muitos aniversários, muitos sonhos realizados juntos. Eu não quero mais nada nessa vida além de envelhecer ao seu lado.</p>
+
+      <p>Eu te amo mais do que ontem, e amanhã te amarei ainda mais. Você é e sempre será o amor da minha vida.</p>
+      
+      <div class="assinatura">Sua para sempre,<br>Maleny</div>
+    </div>
+
+    <div class="timeline">
+      <div><b id="anos">0</b><span>Anos</span></div>
+      <div><b id="meses">0</b><span>Meses</span></div>
+      <div><b id="totalDias">0</b><span>Dias de Amor</span></div>
+    </div>
+
+    <button class="btn" onclick="alert('Feliz Aniversário de Casamento, meus amores! Que Deus abençoe essa união linda! 💍❤️ Maleny & Jaime')">CLIQUE AQUI PARA UMA SURPRESA</button>
+  </div>
+</div>
+
+<div class="footer">FEITO COM AMOR PARA MALENY & JAIME • 2025</div>
+
+<script>
+  const inicio = new Date('2025-05-31T00:00:00');
+  const hoje = new Date();
+  const diffMs = hoje - inicio;
+  const diffDias = Math.floor(diffMs / (1000*60*60*24));
+  
+  document.getElementById('dias').innerText = diffDias;
+  document.getElementById('totalDias').innerText = diffDias;
+
+  let anos = hoje.getFullYear() - inicio.getFullYear();
+  let meses = hoje.getMonth() - inicio.getMonth();
+  if(meses < 0){ anos--; meses += 12; }
+  document.getElementById('anos').innerText = anos >=0 ? anos : 0;
+  document.getElementById('meses').innerText = meses >=0 ? meses : 0;
+</script>
+
+</body>
+</html>
